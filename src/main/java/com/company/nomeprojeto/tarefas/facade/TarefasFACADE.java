@@ -35,4 +35,22 @@ public class TarefasFACADE {
         tarefas.remove(tarefaId);
         return "Tarefa deletada com sucesso";
     }
+    //
+    public List<TarefaDTO> createMultiple(List<TarefaDTO> tarefaDTOs) {
+        List<TarefaDTO> createdTarefas = new ArrayList<>();
+        for (TarefaDTO tarefaDTO : tarefaDTOs) {
+            createdTarefas.add(create(tarefaDTO));
+        }
+        return createdTarefas;
+    }
+    //
+    public List<TarefaDTO> updateMultiple(List<TarefaDTO> tarefaDTOs) {
+        List<TarefaDTO> updatedTarefas = new ArrayList<>();
+        for (TarefaDTO tarefaDTO : tarefaDTOs) {
+            if (tarefaDTO.getId() != null && tarefas.containsKey(tarefaDTO.getId())) {
+                updatedTarefas.add(update(tarefaDTO, tarefaDTO.getId()));
+            }
+        }
+        return updatedTarefas;
+    }
 }

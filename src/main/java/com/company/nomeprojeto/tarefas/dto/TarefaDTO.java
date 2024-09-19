@@ -5,22 +5,23 @@ public class TarefaDTO {
     private String titulo;
     private String descricao;
 
-    public Long getId() { // metodo get para obter o ID da tarefa
+    // Getters e Setters
+    public Long getId() {
         return id;
     }
-    public void setId(Long id) { // metodo set para definir o ID da tarefa
+    public void setId(Long id) {
         this.id = id;
     }
-    public String getTitulo() { // metodo get para obter o titulo da tarefa
+    public String getTitulo() {
         return titulo;
     }
-    public void setTitulo(String titulo) { // metodo set para definir o titulo da tarefa
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    public String getDescricao() { // metodo get para obter a descricao da tarefa
+    public String getDescricao() {
         return descricao;
     }
-    public void setDescricao(String descricao) { // metodo set para definir a descricao da tarefa
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 }
